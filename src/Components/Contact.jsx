@@ -164,7 +164,7 @@ function Contact(props) {
                   <div className="flex align-start">
                     <div className="shrink-0">
                       <div className="bg-orange-500 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
-                      <i class="fa-solid fa-id-badge text-slate-800 text-2xl"></i>
+                      <i className="fa-solid fa-id-badge text-slate-800 text-2xl"></i>
                       </div>
                     </div>
                     <div className="grow ml-6">

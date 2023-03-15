@@ -30,9 +30,8 @@ export default function Card() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-slate-100">
       <div className="flex flex-col  items-center mb-5">
-        <i className="fa-brands fa-github-alt text-5xl text-slate-500 mb-1"></i>
-        <h1 className="mb-1 text-slate-500 text-3xl">Github Stats</h1>
-        <h2 className="mb-6 text-slate-500 text-xl">v2.0</h2>
+      <i class="fa-solid fa-basketball text-5xl text-slate-500 mb-1"></i>
+        <h1 className="mb-1 text-slate-500 text-3xl">NBA Events</h1>
       </div>
 
       <div className="w-full max-w-sm bg-slate-700 rounded-2xl shadow-xl hover:shadow-orange-500 transition-shadow duration-700">

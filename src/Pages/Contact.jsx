@@ -37,7 +37,7 @@ function Contact(props) {
         <section className="mb-32 text-slate-500">
           <div className="flex justify-center">
             <div className="text-center lg:max-w-3xl md:max-w-xl">
-              <h2 className="text-3xl font-semibold mb-20 mt-12 px-6">Lets work together</h2>
+              <h2 className="text-3xl font-semibold mb-20 px-6">Lets work together</h2>
             </div>
           </div>
 
@@ -110,7 +110,7 @@ function Contact(props) {
                     <div className="grow ml-6">
                       <p className="font-semibold mb-1">Github</p>
                       <a
-                        href="https://github.com/shaky411"
+                        href="https://github.com"
                         target="_blank" rel="noopener noreferrer"
                         className="text-cyan-500 hover:text-pink-500 font-light no-underline"
                       >
@@ -130,7 +130,7 @@ function Contact(props) {
                     <div className="grow ml-6">
                       <p className="font-semibold mb-1">Twitter</p>
                       <a
-                        href="https://twitter.com/swiftgekko"
+                        href="https://twitter.com"
                         target="_blank" rel="noopener noreferrer"
                         className="text-cyan-500 hover:text-pink-500 font-light no-underline"
                       >
@@ -150,7 +150,7 @@ function Contact(props) {
                     <div className="grow ml-6">
                       <p className="font-semibold mal mb-1">LinkedIn</p>
                       <a
-                        href="https://www.linkedin.com/in/marcnorris1984"
+                        href="https://www.linkedin.com"
                         target="_blank" rel="noopener noreferrer"
                         className="text-cyan-500 hover:text-pink-500 font-light no-underline"
                       >
@@ -160,28 +160,7 @@ function Contact(props) {
 
                   </div>
                 </div>
-                <div className="mb-12 grow-0 shrink-0 basis-auto w-full lg:w-6/12 px-3 lg:px-6">
-                  <div className="flex align-start">
-                    <div className="shrink-0">
-                      <div className="bg-orange-500 rounded-md shadow-md w-14 h-14 flex items-center justify-center">
-                      <i className="fa-solid fa-id-badge text-slate-800 text-2xl"></i>
-                      </div>
-                    </div>
-                    <div className="grow ml-6">
-                      <p className="font-semibold mal mb-1">Portfolio</p>
-                      <a
-                        href="https://shaky411.github.io/react-portfolio-new/"
-                        target="_blank" rel="noopener noreferrer"
-                        className="text-cyan-500 hover:text-pink-500 font-light no-underline"
-                      >
-                        My Portfolio
-                      </a>
-                    </div>
-
-
-
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

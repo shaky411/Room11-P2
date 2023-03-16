@@ -19,7 +19,7 @@ function Header() {
       <ul className="flex justify-center text-slate-500 space-x-10 p-6 bg-slate-200">
         <li className="nav-item hover:text-pink-500">
           <NavLink
-            to="/room11-p2/"
+            to="/"
             end
             className={({ isActive }) =>
               isActive ? "nav-link active" : "nav-link"
@@ -30,7 +30,7 @@ function Header() {
         </li>
         <li className="nav-item hover:text-pink-500">
           <NavLink
-            to="/room11-p2/about"
+            to="about"
             className={({ isActive }) =>
               isActive ? "nav-link active" : "nav-link"
             }
@@ -42,7 +42,7 @@ function Header() {
         
         <li className="nav-item hover:text-pink-500">
           <NavLink
-            to="/room11-p2/contact"
+            to="contact"
             className={({ isActive }) =>
               isActive ? "nav-link active" : "nav-link"
             }

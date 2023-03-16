@@ -7,7 +7,7 @@ function Footer() {
         © 2023 All Rights Reserved.
       </span>
       <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github ml-2 text-gray-400 hover:text-indigo-500 text-2xl"></i></a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter ml-2 text-gray-400 hover:text-indigo-500 text-2xl"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-twitter ml-2 text-gray-400 hover:text-indigo-500 text-2xl"></i></a>
       <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin ml-2 text-gray-400 hover:text-indigo-500 text-2xl"></i></a>
     </footer>
   );

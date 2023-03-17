@@ -29,13 +29,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <div>
+
+    <div className="flex flex-col md:flex-row">
       {/* <img src={heroImage} alt="" /> */}
       {events.map((event) => (
         <div key={event.id}>
           <h2>{event.name}</h2>
           {/* rending the largest image from the events->images array comparing the width of the current img ot the previous and return the ur of the largest one  */}
-          <img
+          <img className="hover:scale-125 transition-scale duration-700 shadow-lg"
             src={
               event.images.reduce((max, img) =>
                 img.width > max.width ? img : max

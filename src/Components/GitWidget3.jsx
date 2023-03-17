@@ -32,9 +32,9 @@ export default function GitWidget3() {
   // Additional end point -> https://api.github.com/users/timmywheels/repos
 
   // eslint-disable-next-line
-  let twitterLink = "https://twitter.com/" + `${githubData.twitter_username}`;
-  let twitterLink2 = "https://twitter.com/" + `${githubData2.twitter_username}`;
-  let twitterLink3 = "https://twitter.com/" + `${githubData2.twitter_username}`;
+  let twitterLink = `https://twitter.com/ ${githubData.twitter_username}`;
+  let twitterLink2 = `https://twitter.com/ ${githubData2.twitter_username}`;
+  let twitterLink3 = `https://twitter.com/ ${githubData2.twitter_username}`;
 
   // Add API call to use effect
   useEffect(() => {

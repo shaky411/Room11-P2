@@ -5,6 +5,8 @@ function SearchComponent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedOption, setSelectedOption] = useState(" events");
   const [venues, setVenues] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [attractions, setAttractions] = useState([]);
   const api = "46iF2Ih3nFmhNcqtnKSe4WaDmAms5AP6";
 
   const handleInputChange = (event) => {
@@ -17,6 +19,9 @@ function SearchComponent() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setEvents([]);
+setVenues([]);
+setAttractions([]);
     axios
       .get(
         `https://app.ticketmaster.com/discovery/v2/${selectedOption}?keyword=${searchQuery}&apikey=${api}&size=6`
@@ -24,7 +29,13 @@ function SearchComponent() {
       .then((response) => {
         if (selectedOption === "venues") {
           setVenues(response.data._embedded.venues);
-        } else {
+        }
+        else if (selectedOption === "attractions") {
+          setAttractions(response.data._embedded.attractions);
+          console.log(response.data._embedded.attractions);
+        }
+        else  {
+          setEvents(response.data._embedded.events);
           console.log(response.data._embedded.events);
         }
       });
@@ -67,7 +78,17 @@ function SearchComponent() {
           </div>
         </div>
       </div>
-
+      {events.length > 0 && (
+  <div className="event-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {events.map((event) => (
+      <div className="card" key={event.id}>
+        <div className="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+          <h2>{event.name}</h2>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
       {venues.length > 0 && (
         <div className="venue-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {venues.map((venue) => (
@@ -79,6 +100,17 @@ function SearchComponent() {
           ))}
         </div>
       )}
+      {attractions.length > 0 && (
+  <div className="attraction-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {attractions.map((attraction) => (
+      <div className="card" key={attraction.id}>
+        <div className="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+          <h2>{attraction.name}</h2>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
     </div>
   );
 }

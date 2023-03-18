@@ -6,8 +6,8 @@ import SearchComponent from "../Components/SearchComponent";
 export default function Home() {
   return (
     <div >
-      <SearchComponent></SearchComponent>
       <Hero></Hero>
+      <SearchComponent></SearchComponent>
     </div>
   );
 }

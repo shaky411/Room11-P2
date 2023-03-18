@@ -79,15 +79,24 @@ setAttractions([]);
         </div>
       </div>
       {events.length > 0 && (
-  <div className="event-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+  <section className="event-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
     {events.map((event) => (
       <div className="card" key={event.id}>
         <div className="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
-          <h2>{event.name}</h2>
+          <div className="relative"><img className="w-[100%]" src={event.images[1].url} alt={event.name}/>
+          <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
+          <h2 className=" bg-opacity-100 text-white uppercase text-[20px]">{event.name}</h2>
+          </div>
+          </div>
+          <h2>{event.dates.start.localDate}</h2>
+          <h3>{event._embedded.venues[0].name}</h3>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <a href={event.url}>FIND TICKETS</a>
+</button>
         </div>
       </div>
     ))}
-  </div>
+  </section>
 )}
       {venues.length > 0 && (
         <div className="venue-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

@@ -8,7 +8,7 @@ function SearchComponent() {
   const [venues, setVenues] = useState([]);
   const [events, setEvents] = useState([]);
   const [attractions, setAttractions] = useState([]);
-  const api = "46iF2Ih3nFmhNcqtnKSe4WaDmAms5AP6";
+  const api = "9hXnfPAAHbB5UPYZbISFo84dHxVfHL8o";
 
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -30,6 +30,7 @@ setAttractions([]);
       .then((response) => {
         if (selectedOption === "venues") {
           setVenues(response.data._embedded.venues);
+          console.log(response.data._embedded.venues);
         }
         else if (selectedOption === "attractions") {
           setAttractions(response.data._embedded.attractions);
@@ -80,7 +81,9 @@ setAttractions([]);
         </div>
       </div>
 
+{/* Above search button area, below search return areas */}
 
+{/* Events search return */}
       {events.length > 0 && (
             <div className="content-width">
               <section className="event-feature-display-area">
@@ -97,7 +100,7 @@ setAttractions([]);
         <h3>{events[0].dates.start.localDate}</h3>
         <h4>{events[0]._embedded.venues[0].name}</h4>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <a href={events[0].url}>FIND TICKETS</a>
+          <a href={events[0].url} target="_blank" rel="noopener noreferrer">FIND TICKETS</a>
       </button>
       </div>
       </div>
@@ -117,7 +120,7 @@ setAttractions([]);
           <h2>{event.dates.start.localDate}</h2>
           <h3>{event._embedded.venues[0].name}</h3>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <a href={event.url}>FIND TICKETS</a>
+          <a href={event.url} target="_blank" rel="noopener noreferrer">FIND TICKETS</a>
 </button>
         </div>
       </div>
@@ -126,28 +129,55 @@ setAttractions([]);
   </section>
   </div>
 )}
-      {venues.length > 0 && (
-        <div className="venue-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {venues.map((venue) => (
-            <div className="card" key={venue.id}>
-              <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
-                <h2>{venue.name}</h2>
-              </div>
-            </div>
-          ))}
+
+{/* Venues search return */}
+{venues.length > 0 && (
+  <div className="content-width">
+    <section className="venue-feature-display-area">
+      <h2 className="feature-title">FEATURED VENUE</h2>
+      <div className="featured-flex-container" key={venues[0].id}>
+        <div className="feature-image">
+          <img className="w-[100%]" src={venues[0].images[0].url} alt={venues[0].name} />
         </div>
-      )}
-      {attractions.length > 0 && (
-  <div className="attraction-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    {attractions.map((attraction) => (
-      <div className="card" key={attraction.id}>
-        <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
-          <h2>{attraction.name}</h2>
+        <div className="feature-text-area">
+          <h2>{venues[0].name}</h2>
+          <p>{venues[0].address.line1}</p>
+          <p>{venues[0].city.name}, {venues[0].state.stateCode} {venues[0].postalCode}</p>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href={venues[0].url} target="_blank" rel="noopener noreferrer">MORE INFO</a>
+          </button>
         </div>
       </div>
-    ))}
+    </section>
+    <section>
+      <h2 className="more-to-come">More venues to come....</h2>
+      <div className="venue-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
+        {venues.slice(1).map((venue) => (
+          <div className="card" key={venue.id}>
+            <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+              <div className="relative">
+                {/* <img className="w-[100%] rounded-t-[20px]" src={images[0].url} alt="test" /> */}
+                <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
+                  <h2 className="bg-opacity-100 text-white uppercase text-[20px]">{venue.name}</h2>
+                </div>
+              </div>
+              <p>{venue.id}</p>
+              {/* <p>{venue.city.name}, {venue.state.stateCode} {venue.postalCode}</p> */}
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                {/* <a href={venue.url} target="_blank" rel="noopener noreferrer">MORE INFO</a> */}
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   </div>
 )}
+
+
+
+
+
     </div>
   );
 }

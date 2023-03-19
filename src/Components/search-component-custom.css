@@ -1,10 +1,10 @@
-.event-feature-display-area {
+.event-feature-display-area, .venue-feature-display-area {
     position: relative;
     width: 100%;
     padding: 110px 30px 50px;
     margin-top: 50px;
     border-radius: 30px;
-    background-image: url('../assets/images/concert-crowd-effect.jpg');
+    background-image: url('../assets/images/concert-crowd-effect-2.jpg');
     background-size: cover;
     background-position: 50% 100%;
     box-sizing: border-box;
@@ -17,7 +17,6 @@ h2.feature-title {
     margin: 0 auto;
     font-weight: bold;
     padding: 10px 10px;
-    background:#334154;
     display: table;
     position: absolute;
     top: 0;

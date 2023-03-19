@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./search-component-custom.css"
 
 function SearchComponent() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -82,27 +83,33 @@ setAttractions([]);
 
       {events.length > 0 && (
             <div className="content-width">
-              <section className="event-feature-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
-    <div className="card" key={events[0].id}>
-      <div className="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
-        <div className="relative"><img className="w-[100%]" src={events[0].images[1].url} alt={events[0].name}/>
-        <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
-        <h2 className=" bg-opacity-100 text-white uppercase text-[20px]">{events[0].name}</h2>
+              <section className="event-feature-display-area">
+                
+                <h2 className="feature-title">UP NEXT!</h2>
+
+                
+                <div className="featured-flex-container" key={events[0].id}>
+      
+        <div className="feature-image"><img className="w-[100%]" src={events[0].images[1].url} alt={events[0].name}/>        
         </div>
-        </div>
-        <h2>{events[0].dates.start.localDate}</h2>
-        <h3>{events[0]._embedded.venues[0].name}</h3>
+        <div className="feature-text-area">
+        <h2>{events[0].name}</h2>
+        <h3>{events[0].dates.start.localDate}</h3>
+        <h4>{events[0]._embedded.venues[0].name}</h4>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        <a href={events[0].url}>FIND TICKETS</a>
+          <a href={events[0].url}>FIND TICKETS</a>
       </button>
       </div>
-    </div>
+      </div>
   </section>
-  <section className="event-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
+  <section>
+  <h2 className="more-to-come">More to come....</h2>
+    <div className="event-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
+  
     {events.slice(1).map((event) => (
       <div className="card" key={event.id}>
-        <div className="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
-          <div className="relative"><img className="w-[100%]" src={event.images[1].url} alt={event.name}/>
+        <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+          <div className="relative"><img className="w-[100%] rounded-t-[20px]" src={event.images[1].url} alt={event.name}/>
           <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
           <h2 className=" bg-opacity-100 text-white uppercase text-[20px]">{event.name}</h2>
           </div>
@@ -115,6 +122,7 @@ setAttractions([]);
         </div>
       </div>
     ))}
+    </div>
   </section>
   </div>
 )}
@@ -122,7 +130,7 @@ setAttractions([]);
         <div className="venue-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {venues.map((venue) => (
             <div className="card" key={venue.id}>
-              <div className="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+              <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
                 <h2>{venue.name}</h2>
               </div>
             </div>
@@ -133,7 +141,7 @@ setAttractions([]);
   <div className="attraction-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
     {attractions.map((attraction) => (
       <div className="card" key={attraction.id}>
-        <div className="block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+        <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
           <h2>{attraction.name}</h2>
         </div>
       </div>

@@ -28,8 +28,8 @@ axios
   // Using category eg music
   // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?classificationName=music&keyword="${searchQuery} tour"&apikey=${api}&size=37&sort=date,asc`
   // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
-  // `https://app.ticketmaster.com/discovery/v2/${selectedOption}?classificationName=sport&keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
-`https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37`
+  `https://app.ticketmaster.com/discovery/v2/${selectedOption}?classificationName=sport&keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
+// `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37`
 
 )
 
@@ -171,6 +171,7 @@ axios
           </div>
 
         <h3>{venue.postalCode}</h3>
+        <h3>{venue.address?.line1}</h3>
         {/* console.log({venues[1].address.line1}) */}
         {/* <h4>{venue.city.name}</h4> */}
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

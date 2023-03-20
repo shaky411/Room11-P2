@@ -23,10 +23,16 @@ function SearchComponent() {
     setEvents([]);
 setVenues([]);
 setAttractions([]);
-    axios
-      .get(
-        `https://app.ticketmaster.com/discovery/v2/${selectedOption}?keyword=${searchQuery}&apikey=${api}&size=7`
-      )
+axios
+.get(
+  // Using category eg music
+  // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?classificationName=music&keyword="${searchQuery} tour"&apikey=${api}&size=37&sort=date,asc`
+  // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
+  // `https://app.ticketmaster.com/discovery/v2/${selectedOption}?classificationName=sport&keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
+`https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37`
+
+)
+
       .then((response) => {
         if (selectedOption === "venues") {
           setVenues(response.data._embedded.venues);
@@ -81,9 +87,7 @@ setAttractions([]);
         </div>
       </div>
 
-{/* Above search button area, below search return areas */}
 
-{/* Events search return */}
       {events.length > 0 && (
             <div className="content-width">
               <section className="event-feature-display-area">
@@ -130,52 +134,55 @@ setAttractions([]);
   </div>
 )}
 
-{/* Venues search return */}
+
+
 {venues.length > 0 && (
-  <div className="content-width">
-    <section className="venue-feature-display-area">
-      <h2 className="feature-title">FEATURED VENUE</h2>
-      <div className="featured-flex-container" key={venues[0].id}>
-        <div className="feature-image">
-          <img className="w-[100%]" src={venues[0].images[0].url} alt={venues[0].name} />
+            <div className="content-width">
+              <section className="venue-feature-display-area">
+                
+                <h2 className="feature-title">UP NEXT!</h2>
+
+                
+                <div className="featured-flex-container" key={venues[0].id}>
+      
+        <div className="feature-image"><img className="w-[100%]" src={venues[0].images[0].url} alt={venues[0].name}/>        
         </div>
         <div className="feature-text-area">
-          <h2>{venues[0].name}</h2>
-          <p>{venues[0].address.line1}</p>
-          <p>{venues[0].city.name}, {venues[0].state.stateCode} {venues[0].postalCode}</p>
+        <h2>{venues[0].name}</h2>
+        <h3>{venues[0].address.line1}</h3>
+        <h4>{venues[0].city.name}</h4>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <a href={venues[0].url} target="_blank" rel="noopener noreferrer">FIND TICKETS</a>
+      </button>
+      </div>
+      </div>
+  </section>
+  <section>
+  <h2 className="more-to-come">More to come....</h2>
+    <div className="venue-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
+  
+    {venues.slice(1).map((venue) => (
+      <div className="card" key={venue.id}>
+        <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+          <div className="relative"><img className="w-[100%] rounded-t-[20px]" src={venues[0].images[0].url} alt={venues[0].name}/>
+          <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
+          <h2 className=" bg-opacity-100 text-white uppercase text-[20px]">{venue.name}</h2>
+          </div>
+          </div>
+
+        <h3>{venue.postalCode}</h3>
+        {/* console.log({venues[1].address.line1}) */}
+        {/* <h4>{venue.city.name}</h4> */}
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <a href={venues[0].url} target="_blank" rel="noopener noreferrer">MORE INFO</a>
-          </button>
+          <a href={venue.url} target="_blank" rel="noopener noreferrer">FIND TICKETS</a>
+</button>
         </div>
       </div>
-    </section>
-    <section>
-      <h2 className="more-to-come">More venues to come....</h2>
-      <div className="venue-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
-        {venues.slice(1).map((venue) => (
-          <div className="card" key={venue.id}>
-            <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
-              <div className="relative">
-                {/* <img className="w-[100%] rounded-t-[20px]" src={images[0].url} alt="test" /> */}
-                <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
-                  <h2 className="bg-opacity-100 text-white uppercase text-[20px]">{venue.name}</h2>
-                </div>
-              </div>
-              <p>{venue.id}</p>
-              {/* <p>{venue.city.name}, {venue.state.stateCode} {venue.postalCode}</p> */}
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                {/* <a href={venue.url} target="_blank" rel="noopener noreferrer">MORE INFO</a> */}
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+    ))}
+    </div>
+  </section>
   </div>
 )}
-
-
-
 
 
     </div>

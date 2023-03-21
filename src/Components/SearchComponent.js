@@ -111,7 +111,7 @@ axios
   
     {events.slice(1).map((event) => (
       <div className="card" key={event.id}>
-        <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
+        <div className="block rounded-lg bg-white p-6 shadow-lg">
           <div className="relative"><img className="w-[100%] rounded-t-[20px]" src={event.images[1].url} alt={event.name}/>
           <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
           <h2 className=" bg-opacity-100 text-white uppercase text-[20px]">{event.name}</h2>

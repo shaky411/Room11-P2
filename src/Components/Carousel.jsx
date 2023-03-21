@@ -23,12 +23,12 @@ function Carousel({ slides }) {
   };
 
   return (
-    <div className='max-w-[1400px] h-screen w-full m-auto py-16 px-4 relative group '>
+    <div className='w-1/1 m-auto py-16 px-4 relative group'>
         <div className='absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block'>
-        <h2 className=" bottom-0 left-0 right-0  py-2 px-4 "> {slides[currentIndex].name} </h2>
+        <h2 className=" bottom-0 text-white text-3xl left-0 right-0  py-2 px-4 "> {slides[currentIndex].name} </h2>
         </div>
         
-        <img className='w-full h-full rounded-2xl bg-center bg-cover duration-500' src= {slides[currentIndex].imageUrl} alt="..." />
+        <img className='w-full h-full mb-10 rounded-2xl bg-center shadow-lg bg-cover duration-500' src= {slides[currentIndex].imageUrl} alt="..." />
         
 
       {/* Left Arrow */}
@@ -46,7 +46,7 @@ function Carousel({ slides }) {
             onClick={() => goToSlide(slideIndex)}
             className='text-2xl cursor-pointer'
           >
-            <RxDotFilled />
+            {/* <RxDotFilled /> */}
           </div>
         ))}
       </div>

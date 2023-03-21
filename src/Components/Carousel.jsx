@@ -23,8 +23,11 @@ function Carousel({ slides }) {
   };
 
   return (
-    <div className='max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group'>
-        <h2 className=" bottom-0 left-0 right-0  py-2 px-4"> {slides[currentIndex].name} </h2>
+    <div className='max-w-[1400px] h-screen w-full m-auto py-16 px-4 relative group '>
+        <div className='absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block'>
+        <h2 className=" bottom-0 left-0 right-0  py-2 px-4 "> {slides[currentIndex].name} </h2>
+        </div>
+        
         <img className='w-full h-full rounded-2xl bg-center bg-cover duration-500' src= {slides[currentIndex].imageUrl} alt="..." />
         
 

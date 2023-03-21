@@ -1,3 +1,17 @@
+.section-header {
+    background: #E2E8F0;
+    margin: 0 auto 20px;
+    color: #334154;
+    padding: 10px 20px;
+    border-radius: 10px;
+ }
+
+.section-header h2 {
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 3px;
+}
+
 .event-feature-display-area, .venue-feature-display-area {
     position: relative;
     width: 100%;
@@ -8,6 +22,17 @@
     background-size: cover;
     background-position: 50% 100%;
     box-sizing: border-box;
+}
+
+
+.form-center {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.inline-block {
+    width: 100%;
+    display: inline-block;
 }
 
 h2.feature-title {

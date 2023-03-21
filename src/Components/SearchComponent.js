@@ -5,9 +5,7 @@ import "./search-component-custom.css"
 function SearchComponent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedOption, setSelectedOption] = useState(" events");
-  const [venues, setVenues] = useState([]);
   const [events, setEvents] = useState([]);
-  const [attractions, setAttractions] = useState([]);
   const api = "9hXnfPAAHbB5UPYZbISFo84dHxVfHL8o";
 
   const handleInputChange = (event) => {
@@ -21,37 +19,35 @@ function SearchComponent() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setEvents([]);
-setVenues([]);
-setAttractions([]);
+let category = "";
+if (selectedOption === "events") {
+  category = "music";
+}
+else if (selectedOption) {
+  category = "sport";
+}
+
 axios
 .get(
   // Using category eg music
   // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?classificationName=music&keyword="${searchQuery} tour"&apikey=${api}&size=37&sort=date,asc`
   // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
-  `https://app.ticketmaster.com/discovery/v2/${selectedOption}?classificationName=sport&keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
+  `https://app.ticketmaster.com/discovery/v2/events?classificationName=${category}&keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
 // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37`
 
 )
 
       .then((response) => {
-        if (selectedOption === "venues") {
-          setVenues(response.data._embedded.venues);
-          console.log(response.data._embedded.venues);
-        }
-        else if (selectedOption === "attractions") {
-          setAttractions(response.data._embedded.attractions);
-          console.log(response.data._embedded.attractions);
-        }
-        else  {
           setEvents(response.data._embedded.events);
-          console.log(response.data._embedded.events);
-        }
+          // console.log(response.data._embedded.events);
+        
       });
   };
 
   return (
     <div>
       <div className="p-[30px] bg-slate-700">
+        <div className="section-header"><h2>SEARCH EVENTS</h2></div>
         <div className="max-w-[450px] mx-auto">
           <div className="flex justify-center">
             <form onSubmit={handleSubmit} className="w-full max-w-md">
@@ -64,9 +60,8 @@ axios
                   <option disabled value=" events">
                     Select
                   </option>
-                  <option value="events">Events</option>
-                  <option value="venues">Venues</option>
-                  <option value="attractions">Attractions</option>
+                  <option value="events">Music</option>
+                  <option value="sport">Sport</option>
                 </select>
                 <input
                   type="text"
@@ -87,6 +82,7 @@ axios
         </div>
       </div>
 
+    
 
       {events.length > 0 && (
             <div className="content-width">
@@ -111,7 +107,7 @@ axios
   </section>
   <section>
   <h2 className="more-to-come">More to come....</h2>
-    <div className="event-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
+    <div className="event-display-area items-baseline grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
   
     {events.slice(1).map((event) => (
       <div className="card" key={event.id}>
@@ -136,54 +132,6 @@ axios
 
 
 
-{venues.length > 0 && (
-            <div className="content-width">
-              <section className="venue-feature-display-area">
-                
-                <h2 className="feature-title">UP NEXT!</h2>
-
-                
-                <div className="featured-flex-container" key={venues[0].id}>
-      
-        <div className="feature-image"><img className="w-[100%]" src={venues[0].images[0].url} alt={venues[0].name}/>        
-        </div>
-        <div className="feature-text-area">
-        <h2>{venues[0].name}</h2>
-        <h3>{venues[0].address.line1}</h3>
-        <h4>{venues[0].city.name}</h4>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <a href={venues[0].url} target="_blank" rel="noopener noreferrer">FIND TICKETS</a>
-      </button>
-      </div>
-      </div>
-  </section>
-  <section>
-  <h2 className="more-to-come">More to come....</h2>
-    <div className="venue-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
-  
-    {venues.slice(1).map((venue) => (
-      <div className="card" key={venue.id}>
-        <div className="block rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
-          <div className="relative"><img className="w-[100%] rounded-t-[20px]" src={venues[0].images[0].url} alt={venues[0].name}/>
-          <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
-          <h2 className=" bg-opacity-100 text-white uppercase text-[20px]">{venue.name}</h2>
-          </div>
-          </div>
-
-        <h3>{venue.postalCode}</h3>
-        <h3>{venue.address?.line1}</h3>
-        {/* console.log({venues[1].address.line1}) */}
-        {/* <h4>{venue.city.name}</h4> */}
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <a href={venue.url} target="_blank" rel="noopener noreferrer">FIND TICKETS</a>
-</button>
-        </div>
-      </div>
-    ))}
-    </div>
-  </section>
-  </div>
-)}
 
 
     </div>

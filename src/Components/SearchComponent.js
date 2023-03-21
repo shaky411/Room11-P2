@@ -107,7 +107,7 @@ axios
   </section>
   <section>
   <h2 className="more-to-come">More to come....</h2>
-    <div className="event-display-area items-baseline grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
+    <div className="event-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
   
     {events.slice(1).map((event) => (
       <div className="card" key={event.id}>

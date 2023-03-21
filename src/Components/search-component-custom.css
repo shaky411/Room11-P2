@@ -1,0 +1,118 @@
+.section-header {
+    background: #E2E8F0;
+    margin: 0 auto 20px;
+    color: #334154;
+    padding: 10px 20px;
+    border-radius: 10px;
+ }
+
+.section-header h2 {
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 3px;
+}
+
+.event-feature-display-area, .venue-feature-display-area {
+    position: relative;
+    width: 100%;
+    padding: 110px 30px 50px;
+    margin-top: 50px;
+    border-radius: 30px;
+    background-image: url('../assets/images/concert-crowd-effect-2.jpg');
+    background-size: cover;
+    background-position: 50% 100%;
+    box-sizing: border-box;
+}
+
+
+.form-center {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.inline-block {
+    width: 100%;
+    display: inline-block;
+}
+
+h2.feature-title {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+    padding: 10px 10px;
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    letter-spacing: 5px;
+    border-bottom: solid 2px white;
+}
+
+.featured-flex-container {
+    display: flex;
+}
+
+.feature-image {
+   width: 60%;
+    margin-right: 50px;
+}
+
+.feature-image img {
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.feature-text-area {
+    flex: 1;
+    text-align: center;
+    margin-top: -25px;
+}
+
+.feature-text-area h2 {
+    color: white;
+    font-size: 64px;
+    letter-spacing: 3px;
+    margin: 0 0 30px;
+}
+
+.feature-text-area h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feature-text-area h4 {
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+
+h2.more-to-come{
+    text-align: center;
+    margin: 40px 0 -40px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .featured-flex-container {
+        display: block;
+}
+.feature-image {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    max-width: 500px;
+}
+.feature-text-area {
+    flex: none;
+    text-align: center;
+    margin-top: 10px;
+}
+}

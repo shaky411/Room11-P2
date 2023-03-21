@@ -5,7 +5,7 @@ import Carousel from "./Carousel";
 export default function Hero() {
   // state intitalisation for 'events' and 'heroImage' variable using 'useState'
   const [events, setEvents] = useState([]);
-  const [venues, setVenues] = useState([]);
+  // const [venues, setVenues] = useState([]);
   // const [heroImage, setHeroImage] = useState([]);
   //an asynch func to fethc the data
   // const [imageUrl,setimageUrl]=useState('');
@@ -22,7 +22,7 @@ export default function Hero() {
         //setting the 'events' state variable tot he event data resposnse
         setEvents(response.data._embedded.events);
         console.log(response.data._embedded.events);
-        setVenues(response.data._embedded.venues);
+        // setVenues(response.data._embedded.venues);
         //setting the 'heriImage' state variable to the event data response
         // setHeroImage(response.data._embedded.events[0].images[0].url);
       } catch (error) {

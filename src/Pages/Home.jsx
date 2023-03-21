@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../Components/Hero";
-import HeroNew from "../Components/HeroNew";
+// import HeroNew from "../Components/HeroNew";
 import SearchComponent from "../Components/SearchComponent";
 
 

@@ -20,7 +20,7 @@
   padding: 60px 30px 50px;
   margin-top: 50px;
   border-radius: 30px;
-  background-image: url(http://localhost:3009/static/media/concert-crowd-effect-2.1965b6d0f3b73c4c8416.jpg);
+  background-image: url('/src/assets/images/concert-crowd-effect-2.jpg');
   background-size: cover;
   background-position: 50% 100%;
   box-sizing: border-box;

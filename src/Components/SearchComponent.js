@@ -46,40 +46,37 @@ axios
 
   return (
     <div>
-      <div className="p-[30px] bg-slate-700">
-        <div className="section-header"><h2>SEARCH EVENTS</h2></div>
-        <div className="max-w-[450px] mx-auto">
-          <div className="flex justify-center">
-            <form onSubmit={handleSubmit} className="w-full max-w-md">
-              <div className="flex items-center border-b border-b-2 border-gray-200 py-2">
-                <select
-                  value={selectedOption}
-                  onChange={handleOptionChange}
-                  className="mr-3 py-[6px] px-[5px] rounded bg-gray-500 text-center border-solid border-2 border-white-900 text-white "
-                >
-                  <option disabled value=" events">
-                    Select
-                  </option>
-                  <option value="events">Music</option>
-                  <option value="sport">Sport</option>
-                </select>
-                <input
-                  type="text"
-                  placeholder="Enter search criteria"
-                  value={searchQuery}
-                  onChange={handleInputChange}
-                  className="placeholder-gray-500 placeholder-lowercase focus:placeholder-transparent uppercase text-center appearance-none bg-white-900 border-solid border-2 border-white-900 w-full text-gray-700 mr-3 py-[6px] rounded leading-tight focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="flex-shrink-0 bg-slate-700 hover:bg-gray-500 tracking-[1.5px] font-bold border-white hover:border-white text-sm border-solid border-2 text-white py-[6px] px-[5px] rounded"
-                >
-                  SUBMIT
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+    <div className="p-[30px] bg-[#3e4f60] text-white">
+      <div className="section-header"><h2>SEE WHATS ON!</h2></div>
+          <form onSubmit={handleSubmit} className="search-form">
+          <div className="inline-block">
+              <select
+              className="search-select"
+                value={selectedOption}
+                onChange={handleOptionChange}
+              >
+                <option disabled value=" events">
+                  Select
+                </option>
+                <option value="events">Music</option>
+                <option value="sport">Sport</option>
+              </select>
+              <input
+                type="text"
+                placeholder="Enter search criteria"
+                value={searchQuery}
+                onChange={handleInputChange}
+                className="search-input"
+              />
+              <button
+                type="submit"
+                className="search-button"
+              >
+                SUBMIT
+              </button>
+            </div>     
+          </form>
+
       </div>
 
     

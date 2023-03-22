@@ -1,235 +1,247 @@
 .section-header {
-    background: #878787;
-    color: white;
-    margin: 0 auto 15px;
-    padding: 5px 15px;
-    border-radius: 10px;
-    display: table;
- }
-
- .section-header h2 {
-    text-align: center;
-    font-size: 22px;
-    letter-spacing: 3px;
-    font-weight: bold;
+  background: #878787;
+  color: white;
+  margin: 0 auto 15px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  display: table;
 }
 
-.event-feature-display-area, .venue-feature-display-area {
-    position: relative;
-    width: 100%;
-    padding: 110px 30px 50px;
-    margin-top: 50px;
-    border-radius: 30px;
-    background-image: url('../assets/images/concert-crowd-effect-2.jpg');
-    background-size: cover;
-    background-position: 50% 100%;
-    box-sizing: border-box;
+.section-header h2 {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
 
-
-.form-center {
-    width: 600px;
-    margin: 0 auto;
+.event-feature-display-area {
+  position: relative;
+  width: 100%;
+  padding: 60px 30px 50px;
+  margin-top: 50px;
+  border-radius: 30px;
+  background-image: url(http://localhost:3009/static/media/concert-crowd-effect-2.1965b6d0f3b73c4c8416.jpg);
+  background-size: cover;
+  background-position: 50% 100%;
+  box-sizing: border-box;
 }
 
 .inline-block {
-    width: 100%;
-    display: inline-block;
+  width: 100%;
+  display: inline-block;
+}
+
+.form-center {
+  width: 280px;
+  margin: 0 auto;
 }
 
 form.search-form {
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 form.search-form select {
-    width: 100px;
-    box-sizing: border-box;
-    padding: 10px;
-    float: left;
-    margin: 0 15px 0 0;
-    border-radius: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    background: #E85E54;
-    color: white;
+  width: 100px;
+  max-width: 250px;
+  float: none;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #e85e54;
+  color: white;
+  height: 40px;
+  border-radius: 5px;
 }
 
 form.search-form select:focus {
-    outline:0;
+  outline: 0;
 }
 
-
-
 input.search-input {
-    width: 250px;
-    padding: 8px;
-    float: left;
-    margin: 0 15px 0 0;
-    border-radius: 5px;
-    text-align: center;
-    text-transform: uppercase;
-    background: #E3295E; 
-    color: white;
+  width: 250px;
+  float: none;
+  margin: 15px auto;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #e3295e;
+  color: white;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px;
 }
 
 input.search-input:focus {
-    outline:0;
+  outline: 0;
 }
 
-.search-form input::placeholder  {
-    opacity: 1; 
-    color: white;
-  }
+.search-form input::placeholder {
+  opacity: 1;
+  color: white;
+}
 
-  .search-form input:-ms-input-placeholder {
-    opacity: 1; 
-    color: white;
-  }
+.search-form input:-ms-input-placeholder {
+  opacity: 1;
+  color: white;
+}
 
-  .search-form input::-ms-input-placeholder {
-    opacity: 1; 
-    color: white;
-  }
+.search-form input::-ms-input-placeholder {
+  opacity: 1;
+  color: white;
+}
 
+.search-form input:focus::placeholder {
+  color: transparent;
+}
 
- 
-.search-form input:focus::placeholder{
-    color: transparent;
-  }
+.search-form input:focus::placeholder {
+  color: transparent;
+}
 
-  .search-form input:focus::placeholder{
-    color: transparent;
-  }
-
-  .search-form input:focus::placeholder {
-    color: transparent;
-  }
+.search-form input:focus::placeholder {
+  color: transparent;
+}
 
 button.search-button {
-    width: 90px;
-    text-align: center;
-    float: left;
-    padding: 8px;
-    color: white;
-    background-color: #15a7c2;
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-align: center;
+  width: 90px;
+  color: white;
+  margin: 0 auto;
+  display: block;
+  float: none;
+  padding: 8px;
+  color: white;
+  background-color: #15a7c2;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 button.search-button:hover {
-    background: #5E54E8;
+  background: #5e54e8;
 }
 
 h2.feature-title {
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    margin: 0 auto;
-    font-weight: bold;
-    padding: 10px 10px;
-    display: table;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    letter-spacing: 5px;
-    border-bottom: solid 2px white;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  padding: 10px 10px;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  letter-spacing: 3px;
 }
 
 .featured-flex-container {
-    display: flex;
+  display: block;
 }
 
 .feature-image {
-   width: 60%;
-    margin-right: 50px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  max-width: 700px;
 }
 
 .feature-image img {
-    border: 2px solid white;
-    border-radius: 30px;
+  border: 2px solid white;
+  border-radius: 30px;
 }
 
 .feature-text-area {
-    flex: 1;
-    text-align: center;
-    margin-top: -25px;
+  flex: none;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .feature-text-area h2 {
-    color: white;
-    font-size: 64px;
-    letter-spacing: 3px;
-    margin: 0 0 30px;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin: 20px 0 20px;
 }
 
 .feature-text-area h3 {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 10px;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
 .feature-text-area h4 {
-    font-size: 30px;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: underline;
-    margin-bottom: 40px;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 0 20px;
 }
 
-h2.more-to-come{
-    text-align: center;
-    margin: 40px 0 -40px;
-    font-size: 20px;
+@media only screen and (min-width: 568px) {
+  .feature-text-area h2 {
+    font-size: 36px;
+  }
+  .feature-text-area h3 {
+    font-size: 28px;
+  }
+  .feature-text-area h4 {
+    font-size: 22px;
+  }
 }
 
-@media only screen and (max-width: 767px) {
-    .featured-flex-container {
-        display: block;
-}
-.feature-image {
-    width: 100%;
-    margin: 0 auto; 
-    display: block;
-    max-width: 500px;
-}
-.feature-text-area {
-    flex: none;
-    text-align: center;
-    margin-top: 10px;
-}
-}
-
-@media only screen and (max-width: 640px) {
-.form-center {
-    width: 280px;
+@media only screen and (min-width: 641px) {
+  .form-center {
+    width: 600px;
     margin: 0 auto;
-}
-form.search-form select {
+  }
+  form.search-form select {
+    float: left;
+    margin: 0 15px 0 0;
+  }
+
+  input.search-input {
     width: 100%;
     max-width: 250px;
-    float: none;
-    margin: 0 auto;
-    display: block;
+    float: left;
+    margin: 0 15px 0 0;
+  }
+  button.search-button {
+    text-align: center;
+    float: left;
+  }
 }
 
-input.search-input {
-    width: 100%;
-    max-width: 250px;
-    float: none;
-    margin: 15px auto;
-    display: block;
-}
-button.search-button {
-    width: 90px;
-    color: white;
-    margin: 0 auto;
-    display: block;
-    float: none;
-}
+@media only screen and (min-width: 868px) {
+  .featured-flex-container {
+    display: flex;
+  }
+  .feature-text-area {
+    flex: 1;
+    text-align: center;
+    margin-top: -25px;
+    line-height: 1.2;
+  }
+  .feature-image {
+    width: 60%;
+    margin-right: 50px;
+  }
+  .feature-text-area h2 {
+    font-size: 38px;
+  }
+
+  .feature-text-area h3 {
+    font-size: 28px;
+  }
+  .feature-text-area h4 {
+    font-size: 24px;
+  }
 }

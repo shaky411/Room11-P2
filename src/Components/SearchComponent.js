@@ -6,7 +6,7 @@ function SearchComponent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedOption, setSelectedOption] = useState(" events");
   const [events, setEvents] = useState([]);
-  const api = "9hXnfPAAHbB5UPYZbISFo84dHxVfHL8o";
+  const api = process.env.REACT_APP_API_KEY;
 
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -39,10 +39,23 @@ axios
 
       .then((response) => {
           setEvents(response.data._embedded.events);
-          // console.log(response.data._embedded.events);
         
       });
   };
+
+
+  const getLargestImage = (event) => {
+    const maxImage = event.images.reduce((max, img) =>
+      img.width > max.width ? img : max
+    );
+    return maxImage.url
+}
+
+
+ 
+
+   
+
 
   return (
     <div>
@@ -79,7 +92,6 @@ axios
 
       </div>
 
-    
 
       {events.length > 0 && (
             <div className="content-width">
@@ -90,7 +102,7 @@ axios
                 
                 <div className="featured-flex-container" key={events[0].id}>
       
-        <div className="feature-image"><img className="w-[100%]" src={events[0].images[1].url} alt={events[0].name}/>        
+        <div className="feature-image"><img className="w-[100%]" src={getLargestImage(events[0])} alt={events[0].name}/>        
         </div>
         <div className="feature-text-area">
         <h2>{events[0].name}</h2>
@@ -103,13 +115,12 @@ axios
       </div>
   </section>
   <section>
-  <h2 className="more-to-come">More to come....</h2>
     <div className="event-display-area grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center py-[50px]">
   
     {events.slice(1).map((event) => (
       <div className="card" key={event.id}>
         <div className="block rounded-lg bg-white p-6 shadow-lg">
-          <div className="relative"><img className="w-[100%] rounded-t-[20px]" src={event.images[1].url} alt={event.name}/>
+          <div className="relative"><img className="w-[100%] rounded-t-[20px]" src={getLargestImage(event)} alt={event.name}/>
           <div className="absolute bottom-0 w-[100%] bg-slate-700 bg-opacity-80">
           <h2 className=" bg-opacity-100 text-white uppercase text-[20px]">{event.name}</h2>
           </div>

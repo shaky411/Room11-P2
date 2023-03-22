@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./search-component-custom.css"
 
@@ -19,30 +19,50 @@ function SearchComponent() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setEvents([]);
-let category = "";
-if (selectedOption === "events") {
-  category = "music";
-}
-else if (selectedOption) {
-  category = "sport";
-}
+    let category = "";
+    if (selectedOption === "events") {
+      category = "music";
+    }
+    else if (selectedOption) {
+      category = "sport";
+    }
 
-axios
-.get(
-  // Using category eg music
-  // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?classificationName=music&keyword="${searchQuery} tour"&apikey=${api}&size=37&sort=date,asc`
-  // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
-  `https://app.ticketmaster.com/discovery/v2/events?classificationName=${category}&keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
-// `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37`
+    axios
+      .get(
+        // Using category eg music
+        // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?classificationName=music&keyword="${searchQuery} tour"&apikey=${api}&size=37&sort=date,asc`
+        // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
+        `https://app.ticketmaster.com/discovery/v2/events?classificationName=${category}&keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
+        // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37`
 
-)
+      )
 
       .then((response) => {
-          setEvents(response.data._embedded.events);
-        
+
+        setEvents(response.data._embedded.events);
+
+
       });
   };
+  useEffect(() => {
+    axios
+    .get(
+      // Using category eg music
+      // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?classificationName=music&keyword="${searchQuery} tour"&apikey=${api}&size=37&sort=date,asc`
+      // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37&sort=date,asc`
+      `https://app.ticketmaster.com/discovery/v2/events?classificationName=sport&apikey=${api}&size=37&sort=date,asc`
+      // `https://app.ticketmaster.com/discovery/v2/${selectedOption}.json?keyword=${searchQuery}&apikey=${api}&size=37`
 
+    )
+
+    .then((response) => {
+      setEvents(response.data._embedded.events);
+      // console.log(response.data._embedded.events);
+
+    });
+
+     // eslint-disable-next-line
+   }, []);
 
   const getLargestImage = (event) => {
     const maxImage = event.images.reduce((max, img) =>
@@ -59,45 +79,44 @@ axios
 
   return (
     <div>
-    <div className="p-[30px] bg-[#3e4f60] text-white">
-      <div className="section-header"><h2>SEE WHATS ON!</h2></div>
-          <form onSubmit={handleSubmit} className="search-form">
+      <div className="p-[30px] bg-[#3e4f60] text-white">
+        <div className="section-header"><h2>SEE WHATS ON!</h2></div>
+        <form onSubmit={handleSubmit} className="search-form">
           <div className="inline-block">
-              <select
+            <select
               className="search-select"
-                value={selectedOption}
-                onChange={handleOptionChange}
-              >
-                <option disabled value=" events">
-                  Select
-                </option>
-                <option value="events">Music</option>
-                <option value="sport">Sport</option>
-              </select>
-              <input
-                type="text"
-                placeholder="Enter search criteria"
-                value={searchQuery}
-                onChange={handleInputChange}
-                className="search-input"
-              />
-              <button
-                type="submit"
-                className="search-button"
-              >
-                SUBMIT
-              </button>
-            </div>     
-          </form>
+              value={selectedOption}
+              onChange={handleOptionChange}
+            >
+              <option disabled value=" events">
+                Select
+              </option>
+              <option value="events">Music</option>
+              <option value="sport">Sport</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Enter search criteria"
+              value={searchQuery}
+              onChange={handleInputChange}
+              className="search-input"
+            />
+            <button
+              type="submit"
+              className="search-button"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </form>
 
       </div>
 
 
+
       {events.length > 0 && (
-            <div className="content-width">
-              <section className="event-feature-display-area">
-                
-                <h2 className="feature-title">UP NEXT!</h2>
+        <div className="content-width">
+          <section className="event-feature-display-area">
 
                 
                 <div className="featured-flex-container" key={events[0].id}>

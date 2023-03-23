@@ -22,28 +22,31 @@ function Carousel({ slides }) {
 
   return (
     <div className=" m-auto py-16 px-4 relative group ">
-      <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
+      <div className="flex flex-col">
+        
         <a
           href={slides[currentIndex].eventUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className=" bottom-0 text-white text-3xl left-0 right-0  py-2 px-4 ">
-            {slides[currentIndex].name}
-          </h2>
+          <img
+            className="w-full h-full mb-10 rounded-2xl bg-center shadow-lg bg-cover duration-500"
+            src={slides[currentIndex].imageUrl}
+            alt="..."
+          />
         </a>
+        <div className="inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
+          <a
+            href={slides[currentIndex].eventUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <h2 className=" bottom-0 text-white text-3xl left-0 right-0  py-2 px-4 ">
+              {slides[currentIndex].name}
+            </h2>
+          </a>
+        </div>
       </div>
-      <a
-        href={slides[currentIndex].eventUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          className="w-full h-full mb-10 rounded-2xl bg-center shadow-lg bg-cover duration-500"
-          src={slides[currentIndex].imageUrl}
-          alt="..."
-        />
-      </a>
 
       {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">

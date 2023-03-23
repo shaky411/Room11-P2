@@ -64,6 +64,7 @@ function SearchComponent() {
     return maxImage.url;
   };
 
+
   return (
     <div>
       <div className="p-[30px] bg-[#3e4f60] text-white">

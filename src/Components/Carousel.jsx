@@ -41,7 +41,7 @@ function Carousel({ slides }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className=" bottom-0 text-white text-3xl left-0 right-0  py-2 px-4 ">
+            <h2 className=" bottom-0 text-white text-1xl md:text-2xl lg:text-3xl  left-0 right-0  py-2 px-4 ">
               {slides[currentIndex].name}
             </h2>
           </a>
@@ -49,11 +49,11 @@ function Carousel({ slides }) {
       </div>
 
       {/* Left Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="hidden group-hover:block absolute top-[50%] my-[-52px]  -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="hidden group-hover:block absolute top-[50%] my-[-52px] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       <div className="flex top-4 justify-center py-2">

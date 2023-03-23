@@ -113,7 +113,7 @@ function SearchComponent() {
                 <h2>{events[0].name}</h2>
                 <h4>{events[0].dates.start.localDate}</h4>
                 <h3>{events[0]._embedded.venues[0].name}</h3>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded">
+                <button className="bg-blue-500 hover:bg-blue-700 transition duration-500 text-white font-bold py-3 px-4 rounded">
                   <a
                     href={events[0].url}
                     target="_blank"
@@ -144,7 +144,7 @@ function SearchComponent() {
                     </div>
                     <h2 className="text-[18px] mt-[10px] mb-[5px]">{event.dates.start.localDate}</h2>
                     <h3 className="text-[24px] mb-[20px]">{event._embedded.venues[0].name}</h3>
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white mb-[20px] font-bold py-3 px-4 rounded">
+                    <button className="bg-blue-500 hover:bg-blue-700 transition duration-500 hover:shadow-md text-white mb-[20px] font-bold py-3 px-4 rounded">
                       <a
                         href={event.url}
                         target="_blank"

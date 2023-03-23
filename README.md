@@ -1,74 +1,97 @@
-# Getting Started with Create React App
+# GIG-11 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+- [Instalation and Setup instruction](#🛠-installation-and-setup-instructions)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Application Screenshot](#application-screenshot)
+- [Links](#links)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Useful resources](#useful-resources)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+GIG-11 provides a one-stop-shop for finding and purchasing tickets to your favorite events. Our application focuses on a clean interface and ease of use, whether you're OTG or at your desk.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+By leveraging the latest technologies you can easily find the best ticket options that match your preferences and budget.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+We simplify the ticket searching process, saving you time, money, and hassle.
+  
 
-### `npm test`
+## 🛠 Installation and Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Installation: npm install
 
-### `npm run build`
+    In the project directory, you can run: npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser. The page will reload if you make edits.
+## Acceptance Criteria
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ ### Application Requirments
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+- [ ] Use React
+- [ ] Use Node.JS
+- [ ] Have a GET Route
+- [ ] Deployed on Netlify
+- [ ] Use of at least 2 libraries,packages or technologies
+- [ ] Polished UI
+- [ ] Good code quality standards (Indet,scoping,naming)
+- [ ] good quality README.md
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Presentation Requirements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [ ] Elevator pitch: a one minute description of your application.
+- [ ] Concept: What is your user story? What was your motivation for development?
+- [ ] Process: What were the technologies used? How were tasks and group roles broken down and assigned? What challenges did you encounter? What were your successes?
+- [ ] Demo: Show your stuff!
+- [ ] Directions for future development
+- [ ] Links to to the deployed application and the GitHub repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Application Screenshot
 
-## Learn More
+![App](http://url/to/img.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Links
 
-### Code Splitting
+[GIG-11](https://dreamy-granita-5fb38d.netlify.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Built with...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+[React.js](https://react.dev/)  
+[Tailwind CSS](https://tailwindcss.com/)  
+[React Router](https://reactrouter.com/en/main)  
+[Email.js](https://www.emailjs.com/)  
+[Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)  
+[Github API](https://github.com/)  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## What we learned
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Useful Resources
+ 
 
-### `npm run build` fails to minify
+## Authors
+[Reza Ghaniloo](https://github.com/rezan5910)  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Marc Norris](https://github.com/shaky411)  
 
-Testing
-Testing Razzle Dazzle
-Testing Lee
+[Lee Vine](https://github.com/leedvine)  
+ 
+
+## Acknowledgments
+
+Thanks to our instructor Dane and all the TAs, and special thanks to Jonathan, Luis and Andrew for supporting us during our times of difficulty.
+
+   

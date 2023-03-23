@@ -8,7 +8,7 @@
 - [Application Screenshot](#application-screenshot)
 - [Links](#links)
 - [Built with](#built-with)
-- [What I learned](#what-i-learned)
+- [What we learned](#what-we-learned)
 - [Useful resources](#useful-resources)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)

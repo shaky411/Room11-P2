@@ -52,7 +52,7 @@ export default function Hero() {
           alt="logo"
         /> */}
 
-        <div className="container flex flex-col text-center md:text-center lg:text-left md:flex-col lg:flex-row justify-center space-x-10 items-center max-w-6xl mx-auto px-6 py-12">
+        <div className="container flex flex-col text-center md:text-center lg:text-left md:flex-col lg:flex-row justify-center lg:space-x-10 items-center max-w-6xl mx-auto px-6 py-12">
           <div className="max-w-lg md:mt-[32px] md:mb-[0px] lg:mt-[0px] lg:mb-[0px] p-4 font-sans text-4xl text-white uppercase md:mx-0 md:text-6xl">
             Impressive Experiences that deliver
           </div>

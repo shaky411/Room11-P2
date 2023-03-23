@@ -56,8 +56,13 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 ## Application Screenshot
 
-![App](http://url/to/img.png)
+![Alt text](src/assets/images/screenshots/SCR-20230323-s9t.jpeg)
 
+![Alt text](src/assets/images/screenshots/SCR-20230323-s9x.png)
+
+![Alt text](src/assets/images/screenshots/SCR-20230323-sa1.png)
+
+![Alt text](src/assets/images/screenshots/SCR-20230323-sa6.png)
 
 ## Links
 

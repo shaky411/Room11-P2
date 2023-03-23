@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Carousel from "./Carousel";
-
+// import logo1 from "../assets/images/gig11-logo2.png"
 
 export default function Hero() {
   // state intitalisation for 'events' and 'heroImage' variable using 'useState'
@@ -44,15 +44,21 @@ export default function Hero() {
 
   return (
     <section id="hero">
-      {/* add logo here */}
-      <img className="logo " src="src/assets/images/gig11-logo2.png" alt="logo" />
+      <div>
+        {/* add logo here */}
+        {/* <img
+          className="w-1/5"
+          src={logo1}
+          alt="logo"
+        /> */}
 
-      <div className="container flex justify-center space-x-10 items-center max-w-6xl mx-auto px-6 py-12">
-        <div className="max-w-lg mt-32 mb-32 p-4 font-sans text-4xl text-white uppercase md:mx-0 md:text-6xl">
-          Impressive Experiences that deliver
+        <div className="container flex flex-col text-center md:text-left md:flex-row justify-center space-x-10 items-center max-w-6xl mx-auto px-6 py-12">
+          <div className="max-w-lg md:mt-32 md:mb-32 p-4 font-sans text-4xl text-white uppercase md:mx-0 md:text-6xl">
+            Impressive Experiences that deliver
+          </div>
+
+          <div className="md:mt-20">{!!eventList.length && <Carousel slides={eventList} />}</div>
         </div>
-
-        <div>{!!eventList.length && <Carousel slides={eventList} />}</div>
       </div>
     </section>
   );

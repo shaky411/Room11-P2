@@ -21,7 +21,7 @@ function Carousel({ slides }) {
   };
 
   return (
-    <div className=" m-auto py-16 px-4 relative group ">
+    <div className=" m-auto py-[32px] px-4 relative group ">
       <div className="flex flex-col">
         
         <a
@@ -30,7 +30,7 @@ function Carousel({ slides }) {
           rel="noopener noreferrer"
         >
           <img
-            className="w-full h-full mb-10 rounded-2xl bg-center shadow-lg bg-cover duration-500"
+            className="w-full h-full rounded-2xl bg-center shadow-lg bg-cover duration-500"
             src={slides[currentIndex].imageUrl}
             alt="..."
           />

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Carousel from "./Carousel";
 
+
 export default function Hero() {
   // state intitalisation for 'events' and 'heroImage' variable using 'useState'
   const [events, setEvents] = useState([]);
@@ -44,6 +45,7 @@ export default function Hero() {
   return (
     <section id="hero">
       {/* add logo here */}
+      <img className="logo " src="src/assets/images/gig11-logo2.png" alt="logo" />
 
       <div className="container flex justify-center space-x-10 items-center max-w-6xl mx-auto px-6 py-12">
         <div className="max-w-lg mt-32 mb-32 p-4 font-sans text-4xl text-white uppercase md:mx-0 md:text-6xl">

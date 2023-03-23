@@ -16,7 +16,11 @@ function Header() {
           </svg>
         </button>
       </div> */}
-      <ul className="flex justify-center text-slate-500 space-x-10 p-6 bg-slate-200">
+      <div className="bg-[#3E5060] p-[20px]">
+      <img src="https://i.ibb.co/jWjwjf4/gig11-logo.png" alt="gig11-logo" className="w-[70px] mb-[-30px] ml-auto mr-auto bg-[#3E5060]"/>
+          
+        </div>
+      <ul className="flex justify-center text-white space-x-10 p-6 bg-[#3E5060]">
         <li className="nav-item hover:text-pink-500">
           <NavLink
             to="/"

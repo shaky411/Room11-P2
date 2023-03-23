@@ -35,7 +35,7 @@ function Carousel({ slides }) {
             alt="..."
           />
         </a>
-        <div className="inset-x-[15%] bottom-5 hidden py-5 text-center text-black md:block">
+        <div className="inset-x-[15%] bottom-5 py-5 text-center text-black">
           <a
             href={slides[currentIndex].eventUrl}
             target="_blank"

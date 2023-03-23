@@ -52,7 +52,7 @@ function Contact(props) {
                 <div className="absolute top-30 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-4000"></div>
                 </div> */}
                 <div className="container bg-slate-100 bg-opacity-40 p-4 rounded-xl shadow-xl shadow-indigo-500/30 border">
-                  <h2 className="text-center text-slate-500">Send me a message!</h2>
+                  <h2 className="text-center text-slate-500">Send us a message!</h2>
                   <form
                     ref={form}
                     onSubmit={sendEmail}

@@ -56,8 +56,12 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 ## Application Screenshot
 
-![Application Demo](src/assets/images/screenshots/GIG11%20Demo.gif) 
-
+![Alt text](src/assets/images/screenshots/GIG11-01.png)
+![Alt text](src/assets/images/screenshots/GIG11-02.png)
+![Alt text](src/assets/images/screenshots/GIG11-03.png)
+![Alt text](src/assets/images/screenshots/GIG11-04.png)
+![Alt text](src/assets/images/screenshots/GIG11-05.png)
+![Alt text](src/assets/images/screenshots/GIG11-06.png)
 
 ## Links
 

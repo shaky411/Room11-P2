@@ -33,16 +33,16 @@ function Contact(props) {
 
   return (
     <div className="m-5">
-      <div className="container my-24 px-6 mx-auto">
-        <section className="mb-32 text-slate-500">
+      <div className="container my-[60px] md:my-[80px] px-[20px] mx-auto">
+        <section className="mb-[32] text-slate-500">
           <div className="flex justify-center">
             <div className="text-center lg:max-w-3xl md:max-w-xl">
-              <h2 className="text-3xl font-semibold mb-20 px-6">Lets work together</h2>
+              <h2 className="text-3xl font-semibold mb-[50px] md:mb-[70px]">Lets work together</h2>
             </div>
           </div>
 
           <div className="flex flex-wrap">
-            <div className="grow-0 shrink-0 basis-auto mb-12 lg:mb-0 w-full lg:w-5/12 px-3 lg:px-6">
+            <div className="grow-0 shrink-0 basis-auto mb-12 lg:mb-0 w-full lg:w-5/12">
               {/* New form here! */}
               <section>
                 {/* Blob effect */}
@@ -51,7 +51,7 @@ function Contact(props) {
                 <div className="absolute top-40 -left-1 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-2000"></div>
                 <div className="absolute top-30 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-4000"></div>
                 </div> */}
-                <div className="container bg-slate-100 bg-opacity-40 p-4 rounded-xl shadow-xl shadow-indigo-500/30 border">
+                <div className="container bg-slate-100 bg-opacity-40 p-[10px] rounded-xl shadow-xl shadow-indigo-500/30 border">
                   <h2 className="text-center text-slate-500">Send us a message!</h2>
                   <form
                     ref={form}
@@ -59,21 +59,21 @@ function Contact(props) {
                     className="flex flex-col items-center justify-center m-2"
                   >
                     <input
-                      className="bg-white placeholder:text-gray-300 m-2 p-2 rounded shadow-inner border"
+                      className="bg-white placeholder:text-gray-300 m-2 p-2 rounded shadow-inner border w-[100%] max-w-[195px]"
                       type="text"
                       placeholder="Full Name"
                       name="user_name"
                       required
                     />
                     <input
-                      className="bg-white placeholder:text-gray-300 m-2 p-2 rounded shadow-inner border"
+                      className="bg-white placeholder:text-gray-300 m-2 p-2 rounded shadow-inner border w-[100%] max-w-[195px]"
                       type="email"
                       placeholder="Email"
                       name="user_email"
                       required
                     />
                     <input
-                      className="bg-white placeholder:text-gray-300 m-2 p-2 rounded shadow-inner border"
+                      className="bg-white placeholder:text-gray-300 m-2 p-2 rounded shadow-inner border w-[100%] max-w-[195px]"
                       type="text"
                       placeholder="Subject"
                       name="subject"
@@ -84,7 +84,7 @@ function Contact(props) {
                       placeholder="add message here..."
                       cols="30"
                       rows="10"
-                      className="bg-white placeholder:text-gray-300 m-2 p-2 rounded shadow-inner border"
+                      className="bg-white placeholder:text-gray-300 m-2 p-2 rounded shadow-inner border w-[100%] max-w-[280px]"
                     ></textarea>
                     <button
                       type="submit"

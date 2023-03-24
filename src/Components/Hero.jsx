@@ -52,12 +52,12 @@ export default function Hero() {
           alt="logo"
         /> */}
 
-        <div className="container flex flex-col text-center md:text-center lg:text-left md:flex-col lg:flex-row justify-center lg:space-x-10 items-center max-w-6xl mx-auto px-6 py-12">
-          <div className="max-w-lg md:mt-[32px] md:mb-[0px] lg:mt-[0px] lg:mb-[0px] p-4 font-sans text-4xl text-white uppercase md:mx-0 md:text-6xl">
+        <div className="container flex flex-col px-[10px] py-[30px] text-center md:text-center lg:text-left md:flex-col lg:flex-row justify-center lg:space-x-10 items-center max-w-7xl mx-auto md:px-[30px] md:py-[50px]">
+          <div className="max-w-lg md:mt-[32px] md:mb-[0px] lg:mt-[-30px] lg:mb-[0px] p-4 font-sans text-4xl text-white uppercase md:mx-0 md:text-6xl">
             Impressive Experiences that deliver
           </div>
 
-          <div className="md:mt-20 md:mt-[32px] md:mb-[32px] lg:mt-[32px] lg:mb-[32px]">{!!eventList.length && <Carousel slides={eventList} />}</div>
+          <div className="md:mt-20 md:mt-[32px] md:mb-[32px] lg:mt-[32px] lg:mb-[0px]">{!!eventList.length && <Carousel slides={eventList} />}</div>
         </div>
       </div>
     </section>

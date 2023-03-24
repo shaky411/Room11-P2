@@ -67,7 +67,7 @@ function SearchComponent() {
 
   return (
     <div>
-      <div className="p-[30px] bg-[#3e4f60] text-white">
+      <div className="mt-[-1px] p-[30px] bg-[#3e4f60] text-white">
         <div className="section-header">
           <h2>SEE WHATS ON!</h2>
         </div>

@@ -48,10 +48,12 @@ export default function GitWidget3() {
       <div className="flex flex-col text-center items-center justify-center mt-6">
         <i class="fa-solid fa-sitemap mt-10 text-slate-500 text-5xl"></i>
         <h1 className="text-4xl mt-2 text-slate-500">Meet the Team</h1>
-        <p className="w-1/2 mt-4">
-          Welcome to our team! We are a group of highly dedicated and skilled
+          <p className="text-[1.2rem] w-4/5 md:w-3/5 lg:w-1/2 mt-4">
+            We are a group of highly dedicated and skilled
           individuals who are passionate about delivering exceptional results to
-          our clients. Our team consists of professionals from diverse
+          our clients.</p> 
+          <p className="text-[1.2rem] w-4/5 md:w-3/5 lg:w-1/2 mt-4">
+            Our team consists of professionals from diverse
           backgrounds, bringing a wealth of knowledge and expertise to every
           project we undertake.
         </p>

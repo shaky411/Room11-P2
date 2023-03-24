@@ -56,15 +56,12 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 ## Application Screenshot
 
-![Alt text](src/assets/images/screenshots/SCR-20230323-s9t.jpeg)
+![Application Demo](src/assets/images/screenshots/GIG11%20demo.gif) 
 
-![Alt text](src/assets/images/screenshots/SCR-20230323-s9x.png)
-
-![Alt text](src/assets/images/screenshots/SCR-20230323-sa1.png)
-
-![Alt text](src/assets/images/screenshots/SCR-20230323-sa6.png)
 
 ## Links
+
+You would be able to visit our deployed site by following the link below:
 
 [GIG-11](https://dreamy-granita-5fb38d.netlify.app/)
 
@@ -83,9 +80,13 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 ## What we learned
 
+This project has been an invaluable learning experience, enabling us to develop and hone our technical skills and knowledge, problem-solving abilities, and collaborative communication as a team. Through its completion, we have gained practical experience in agile development, as well as learning new technologies and implementation strategies. Moreover, we have acquired the ability to debug and test our code, and most importantly, learned how to communicate and collaborate effectively as individual members of an engineering team.
 
 ## Useful Resources
- 
+
+  
+ [React Documentation](https://react.dev/)
+ [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
 
 ## Authors
 [Reza Ghaniloo](https://github.com/rezan5910)  
@@ -97,6 +98,6 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 ## Acknowledgments
 
-Thanks to our instructor Dane and all the TAs, and special thanks to Jonathan, Luis and Andrew for supporting us during our times of difficulty.
+We would like to express our gratitude to our instructor Dane Edwards and all the TAs who have supported us throughout the course. Their dedication, expertise, and willingness to help have been instrumental in our growth and success. Moreover, we would like to extend a special thanks to Andrew Layendecker, Jonathan Courtney and and Luis Sanchez for going above and beyond to support us during our times of difficulty. Their encouragement, guidance, and patience have been invaluable in helping us overcome challenges and achieve our goals. ✊🏽
 
    

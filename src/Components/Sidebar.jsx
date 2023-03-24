@@ -2,6 +2,7 @@ import React from 'react';
 import { bubble as Menu } from 'react-burger-menu';
 import '../../src/sidebar.css'
 
+// eslint-disable-next-line
 export default props => {
   return (
     <Menu width={300}>

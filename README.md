@@ -56,7 +56,7 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 ## Application Screenshot
 
-![Application Demo](src/assets/images/screenshots/GIG11%20demo.gif) 
+![Application Demo](src/assets/images/screenshots/GIG11%20Demo.gif) 
 
 
 ## Links

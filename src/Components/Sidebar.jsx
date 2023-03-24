@@ -5,6 +5,7 @@ import '../../src/sidebar.css'
 // eslint-disable-next-line
 export default props => {
   return (
+    <div>
     <Menu width={300}>
       <a className="menu-item" href="/"><i class="fa-solid fa-house-chimney mr-4"></i>
         Home
@@ -16,5 +17,6 @@ export default props => {
         Contact
       </a>
     </Menu>
+    </div>
   );
 };

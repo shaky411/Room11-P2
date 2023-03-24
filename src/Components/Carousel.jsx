@@ -21,7 +21,7 @@ function Carousel({ slides }) {
   };
 
   return (
-    <div className=" m-auto py-[32px] px-4 relative group ">
+    <div className=" m-auto pt-[32px] pb-[0px] px-[10px] relative group ">
       <div className="flex flex-col">
         
         <a
@@ -41,7 +41,7 @@ function Carousel({ slides }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className=" bottom-0 text-white text-1xl md:text-2xl lg:text-3xl  left-0 right-0  py-2 px-4 ">
+            <h2 className="bottom-0 text-white text-1xl md:text-2xl lg:text-3xl py-2">
               {slides[currentIndex].name}
             </h2>
           </a>

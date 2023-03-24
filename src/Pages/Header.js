@@ -29,7 +29,7 @@ function Header() {
               isActive ? "nav-link active" : "nav-link"
             }
           >
-            Home
+            {/* Home */}
           </NavLink>
         </li>
         <li className="nav-item hover:text-pink-500">
@@ -39,7 +39,7 @@ function Header() {
               isActive ? "nav-link active" : "nav-link"
             }
           >
-            About
+            {/* About */}
           </NavLink>
         </li>
         
@@ -51,7 +51,7 @@ function Header() {
               isActive ? "nav-link active" : "nav-link"
             }
           >
-            Contact
+            {/* Contact */}
           </NavLink>
         </li>
       </ul>

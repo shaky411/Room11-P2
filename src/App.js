@@ -6,11 +6,14 @@ import Footer from './Components/Footer';
 import Header from './Pages/Header';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen">
+      <div className="App min-h-screen">
+        <Sidebar></Sidebar>
+        <div id="page-wrap">
         <Header />
         {/* Wrap Route elements in a Routes component */}
         <Routes basename="/room11-p2">
@@ -22,6 +25,7 @@ function App() {
         </Routes>
       </div>
       <Footer></Footer>
+      </div>
     </Router>
     
   );
